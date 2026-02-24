@@ -1,28 +1,51 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Github, Mail, Send, CheckCircle, Phone } from "lucide-react"
-import { useLang } from "@/components/lang-provider"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Github,
+  Mail,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Phone,
+} from "lucide-react";
+import { useLang } from "@/components/lang-provider";
 
 export function ContactSection() {
-  const { t } = useLang()
-  const [formState, setFormState] = useState<"idle" | "sending" | "sent">("idle")
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" })
+  const { t } = useLang();
+  const [formState, setFormState] = useState<
+    "idle" | "sending" | "sent" | "error"
+  >("idle");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setFormState("sending")
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormState("sending");
 
-    // Simulate sending (in production, wire to an API route)
-    setTimeout(() => {
-      setFormState("sent")
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
+      setFormState("sent");
       setTimeout(() => {
-        setFormState("idle")
-        setFormData({ name: "", email: "", message: "" })
-      }, 3000)
-    }, 1500)
-  }
+        setFormState("idle");
+        setFormData({ name: "", email: "", message: "" });
+      }, 3000);
+    } catch {
+      setFormState("error");
+      setTimeout(() => setFormState("idle"), 4000);
+    }
+  };
 
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center overflow-y-auto px-6 py-24 md:px-12">
@@ -65,7 +88,10 @@ export function ContactSection() {
         >
           {/* Name */}
           <div className="flex flex-col gap-2">
-            <label htmlFor="name" className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+            <label
+              htmlFor="name"
+              className="font-mono text-xs uppercase tracking-wider text-muted-foreground"
+            >
               {t.contact.nameLabel}
             </label>
             <input
@@ -73,7 +99,9 @@ export function ContactSection() {
               type="text"
               required
               value={formData.name}
-              onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, name: e.target.value }))
+              }
               placeholder={t.contact.namePlaceholder}
               className="rounded-lg border border-border bg-card px-4 py-3 font-sans text-sm text-foreground placeholder:text-muted-foreground/50 transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/30"
             />
@@ -81,7 +109,10 @@ export function ContactSection() {
 
           {/* Email */}
           <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+            <label
+              htmlFor="email"
+              className="font-mono text-xs uppercase tracking-wider text-muted-foreground"
+            >
               {t.contact.emailLabel}
             </label>
             <input
@@ -89,7 +120,9 @@ export function ContactSection() {
               type="email"
               required
               value={formData.email}
-              onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, email: e.target.value }))
+              }
               placeholder={t.contact.emailPlaceholder}
               className="rounded-lg border border-border bg-card px-4 py-3 font-sans text-sm text-foreground placeholder:text-muted-foreground/50 transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/30"
             />
@@ -97,7 +130,10 @@ export function ContactSection() {
 
           {/* Message */}
           <div className="flex flex-col gap-2">
-            <label htmlFor="message" className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+            <label
+              htmlFor="message"
+              className="font-mono text-xs uppercase tracking-wider text-muted-foreground"
+            >
               {t.contact.messageLabel}
             </label>
             <textarea
@@ -105,7 +141,9 @@ export function ContactSection() {
               required
               rows={5}
               value={formData.message}
-              onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+              onChange={(e) =>
+                setFormData((prev) => ({ ...prev, message: e.target.value }))
+              }
               placeholder={t.contact.messagePlaceholder}
               className="resize-none rounded-lg border border-border bg-card px-4 py-3 font-sans text-sm text-foreground placeholder:text-muted-foreground/50 transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/30"
             />
@@ -142,7 +180,11 @@ export function ContactSection() {
                 >
                   <motion.div
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                    transition={{
+                      duration: 1,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
                     className="h-4 w-4 rounded-full border-2 border-primary-foreground/30 border-t-primary-foreground"
                   />
                   {t.contact.sending}
@@ -158,6 +200,18 @@ export function ContactSection() {
                 >
                   <CheckCircle className="h-4 w-4" />
                   {t.contact.success}
+                </motion.span>
+              )}
+              {formState === "error" && (
+                <motion.span
+                  key="error"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, y: -5 }}
+                  className="flex items-center gap-2 text-red-400"
+                >
+                  <AlertCircle className="h-4 w-4" />
+                  {t.contact.error}
                 </motion.span>
               )}
             </AnimatePresence>
@@ -203,5 +257,5 @@ export function ContactSection() {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }

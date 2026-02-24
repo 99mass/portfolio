@@ -189,6 +189,7 @@ export const translations = {
       send: "Envoyer",
       sending: "Envoi...",
       success: "Message envoyé avec succès !",
+      error: "Une erreur est survenue. Veuillez réessayer.",
       orReach: "Ou contactez-moi directement",
     },
     // Placeholders (keep for unused)
@@ -397,6 +398,7 @@ export const translations = {
       send: "Send",
       sending: "Sending...",
       success: "Message sent successfully!",
+      error: "An error occurred. Please try again.",
       orReach: "Or reach me directly",
     },
     // Placeholders
