@@ -136,7 +136,7 @@ export const translations = {
         },
       ],
     },
-    // Mobile projects
+    // Mobile projects 
     mobileProjects: {
       headline: "Projets Mobile",
       subtitle: "Applications natives et cross-platform avec Flutter/Dart.",
