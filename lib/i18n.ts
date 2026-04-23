@@ -45,7 +45,7 @@ export const translations = {
             "Responsable de l'architecture mobile. Intégration d'APIs REST. Développement des fonctionnalités. Déploiement sur les stores. Coordination de l'équipe mobile.",
         },
         {
-          year: "2023 - 2025",
+          year: "2023 - 2026",
           title: "Développeur Full-Stack Web & Mobile",
           place: "Zone01 Dakar",
           location: "Dakar, Sénégal",
@@ -142,6 +142,20 @@ export const translations = {
       subtitle: "Applications natives et cross-platform avec Flutter/Dart.",
       viewCode: "Code source",
       projects: [
+                {
+          title: "SamaTicket",
+          description: "Application de billetterie mobile pour l'achat de tickets d'evenements. Authentification OTP par SMS, parcours d'evenements, achat de billets avec paiement mobile money (Wave, Orange Money, Free Money), generation de codes QR et gestion des billets achetes. Deployee sur le Play Store.",
+          tech: ["Flutter", "Dart", "REST API", "Wave API", "Orange Money API"],
+          playStore: "https://play.google.com/store/apps/details?id=com.nexustechstacks.sama_ticket",
+          image: "/images/project-samaticket.jpg",
+        },
+                {
+          title: "Fadjiou Pro",
+          description: "Application mobile professionnelle deployee sur les stores durant mon experience en tant que Lead Mobile chez Sen Digital Factory. Gestion de services, reservations et notifications push.",
+          tech: ["Flutter", "Dart", "REST API", "Firebase"],
+          appStore: "https://apps.apple.com/us/app/fadjou-pro/id6754820442?l=fr-FR",
+          image: "/images/project-mobile-fadjiou.jpg",
+        },
         {
           title: "Movie List",
           description: "Application Flutter de decouverte de films. Parcourir les films populaires, recherche avancee, fiches detaillees avec notes, bandes-annonces et recommandations.",
@@ -155,12 +169,6 @@ export const translations = {
           tech: ["Flutter", "Dart", "Game Logic"],
           github: "https://github.com/99mass/chess",
           image: "/images/project-mobile-chess.jpg",
-        },
-        {
-          title: "Fadjiou Pro",
-          description: "Application mobile professionnelle deployee sur les stores durant mon experience en tant que Lead Mobile chez Sen Digital Factory. Gestion de services, reservations et notifications push.",
-          tech: ["Flutter", "Dart", "REST API", "Firebase"],
-          image: "/images/project-mobile-fadjiou.jpg",
         },
       ],
     },
@@ -253,7 +261,7 @@ export const translations = {
             "Mobile architecture ownership. REST API integration. Feature development. App store deployment. Mobile team coordination.",
         },
         {
-          year: "2023 - 2025",
+          year: "2023 - 2026",
           title: "Full-Stack Web & Mobile Developer",
           place: "Zone01 Dakar",
           location: "Dakar, Senegal",
@@ -351,6 +359,20 @@ export const translations = {
       subtitle: "Native and cross-platform applications with Flutter/Dart.",
       viewCode: "Source code",
       projects: [
+                {
+          title: "SamaTicket",
+          description: "Mobile ticketing application for event ticket purchases. SMS OTP authentication, event browsing, ticket purchasing with mobile money payment (Wave, Orange Money, Free Money), QR code generation and ticket management. Deployed on the Play Store.",
+          tech: ["Flutter", "Dart", "REST API", "Wave API", "Orange Money API"],
+          playStore: "https://play.google.com/store/apps/details?id=com.nexustechstacks.sama_ticket",
+          image: "/images/project-samaticket.jpg",
+        },
+                {
+          title: "Fadjiou Pro",
+          description: "Professional mobile application deployed on app stores during my experience as Lead Mobile at Sen Digital Factory. Service management, bookings and push notifications.",
+          tech: ["Flutter", "Dart", "REST API", "Firebase"],
+          appStore: "https://apps.apple.com/us/app/fadjou-pro/id6754820442?l=fr-FR",
+          image: "/images/project-mobile-fadjiou.jpg",
+        },
         {
           title: "Movie List",
           description: "Flutter movie discovery app. Browse popular movies, advanced search, detailed sheets with ratings, trailers and recommendations.",
@@ -364,12 +386,6 @@ export const translations = {
           tech: ["Flutter", "Dart", "Game Logic"],
           github: "https://github.com/99mass/chess",
           image: "/images/project-mobile-chess.jpg",
-        },
-        {
-          title: "Fadjiou Pro",
-          description: "Professional mobile application deployed on app stores during my experience as Lead Mobile at Sen Digital Factory. Service management, bookings and push notifications.",
-          tech: ["Flutter", "Dart", "REST API", "Firebase"],
-          image: "/images/project-mobile-fadjiou.jpg",
         },
       ],
     },

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github } from "lucide-react"
+import { Github, Play, Apple } from "lucide-react"
 import Image from "next/image"
 import { useLang } from "@/components/lang-provider"
 
@@ -106,6 +106,32 @@ export function MobileProjectsSection() {
                   >
                     <Github className="h-3.5 w-3.5" />
                     <span>{t.mobileProjects.viewCode}</span>
+                  </a>
+                )}
+
+                {/* Play Store link */}
+                {"playStore" in project && project.playStore && (
+                  <a
+                    href={project.playStore as string}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 font-mono text-xs text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    <Play className="h-3.5 w-3.5" />
+                    <span>Play Store</span>
+                  </a>
+                )}
+
+                {/* App Store link */}
+                {"appStore" in project && project.appStore && (
+                  <a
+                    href={project.appStore as string}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 font-mono text-xs text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    <Apple className="h-3.5 w-3.5" />
+                    <span>App Store</span>
                   </a>
                 )}
               </div>
