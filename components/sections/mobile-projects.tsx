@@ -1,9 +1,45 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github, Play, Apple } from "lucide-react"
+import { Github } from "lucide-react"
 import Image from "next/image"
 import { useLang } from "@/components/lang-provider"
+
+function PlayStoreIcon({ className = "h-4 w-4 shrink-0" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M3.609 1.814L13.792 12 3.61 22.186a1.99 1.99 0 0 1-.61-1.42V3.234c0-.54.22-1.04.61-1.42z"
+        fill="#00D3FF"
+      />
+      <path
+        d="M17.188 8.604L4.854 1.482a2.02 2.02 0 0 0-1.245-.332l10.183 10.183 3.396-2.73z"
+        fill="#00E676"
+      />
+      <path
+        d="M13.792 12l-10.183 10.183c.376.04.776-.07 1.245-.332l12.334-7.122L13.792 12z"
+        fill="#FF3A44"
+      />
+      <path
+        d="M20.916 10.75l-3.728-2.146L13.792 12l3.396 3.396 3.728-2.146a1.442 1.442 0 0 0 0-2.5z"
+        fill="#FFC800"
+      />
+    </svg>
+  )
+}
+
+function AppStoreIcon({ className = "h-4 w-4 shrink-0" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="24" rx="5.5" fill="#007AFF" />
+      <g stroke="#FFFFFF" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="6.5" y1="14.8" x2="17.5" y2="14.8" />
+        <line x1="12" y1="5.2" x2="6.2" y2="17.8" />
+        <line x1="12" y1="5.2" x2="17.8" y2="17.8" />
+      </g>
+    </svg>
+  )
+}
 
 export function MobileProjectsSection() {
   const { t } = useLang()
@@ -39,7 +75,7 @@ export function MobileProjectsSection() {
         </motion.div>
 
         {/* Phone mockup grid */}
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           {t.mobileProjects.projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -48,7 +84,7 @@ export function MobileProjectsSection() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{
                 duration: 0.7,
-                delay: index * 0.2,
+                delay: index * 0.15,
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="group flex flex-col items-center gap-6"
@@ -96,44 +132,44 @@ export function MobileProjectsSection() {
                   ))}
                 </div>
 
-                {/* GitHub link */}
-                {"github" in project && project.github && (
-                  <a
-                    href={project.github as string}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-1 flex items-center gap-2 font-mono text-xs text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    <Github className="h-3.5 w-3.5" />
-                    <span>{t.mobileProjects.viewCode}</span>
-                  </a>
-                )}
+                {/* Links with official store logos */}
+                <div className="flex flex-wrap items-center justify-center gap-2.5 pt-1">
+                  {"github" in project && project.github && (
+                    <a
+                      href={project.github as string}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/btn flex items-center gap-2 rounded-lg border border-border bg-secondary/40 px-3 py-1.5 font-mono text-xs text-muted-foreground transition-all duration-200 hover:border-primary/50 hover:bg-primary/10 hover:text-primary hover:scale-105"
+                    >
+                      <Github className="h-4 w-4 transition-transform group-hover/btn:scale-110" />
+                      <span>{t.mobileProjects.viewCode}</span>
+                    </a>
+                  )}
 
-                {/* Play Store link */}
-                {"playStore" in project && project.playStore && (
-                  <a
-                    href={project.playStore as string}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 font-mono text-xs text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    <Play className="h-3.5 w-3.5" />
-                    <span>Play Store</span>
-                  </a>
-                )}
+                  {"playStore" in project && project.playStore && (
+                    <a
+                      href={project.playStore as string}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/btn flex items-center gap-2 rounded-lg border border-border bg-secondary/40 px-3 py-1.5 font-mono text-xs text-foreground/90 transition-all duration-200 hover:border-primary/50 hover:bg-primary/10 hover:text-primary hover:scale-105"
+                    >
+                      <PlayStoreIcon className="h-4 w-4 shrink-0 transition-transform group-hover/btn:scale-110" />
+                      <span>Play Store</span>
+                    </a>
+                  )}
 
-                {/* App Store link */}
-                {"appStore" in project && project.appStore && (
-                  <a
-                    href={project.appStore as string}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 font-mono text-xs text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    <Apple className="h-3.5 w-3.5" />
-                    <span>App Store</span>
-                  </a>
-                )}
+                  {"appStore" in project && project.appStore && (
+                    <a
+                      href={project.appStore as string}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/btn flex items-center gap-2 rounded-lg border border-border bg-secondary/40 px-3 py-1.5 font-mono text-xs text-foreground/90 transition-all duration-200 hover:border-[#007AFF]/50 hover:bg-[#007AFF]/10 hover:text-[#007AFF] hover:scale-105"
+                    >
+                      <AppStoreIcon className="h-4 w-4 shrink-0 transition-transform group-hover/btn:scale-110" />
+                      <span>App Store</span>
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}

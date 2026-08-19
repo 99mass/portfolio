@@ -144,10 +144,25 @@ export const translations = {
       projects: [
                 {
           title: "SamaTicket",
-          description: "Application de billetterie mobile pour l'achat de tickets d'evenements. Authentification OTP par SMS, parcours d'evenements, achat de billets avec paiement mobile money (Wave, Orange Money, Free Money), generation de codes QR et gestion des billets achetes. Deployee sur le Play Store.",
+          description: "Application de billetterie mobile pour l'achat de tickets d'evenements. Authentification OTP par SMS, parcours d'evenements, achat de billets avec paiement mobile money (Wave, Orange Money, Free Money), generation de codes QR et gestion des billets achetes. Deployee sur le Play Store et l'App Store.",
           tech: ["Flutter", "Dart", "REST API", "Wave API", "Orange Money API"],
           playStore: "https://play.google.com/store/apps/details?id=com.nexustechstacks.sama_ticket",
+          appStore: "https://apps.apple.com/us/app/samaticket/id6770509339?l=fr-FR",
           image: "/images/project-samaticket.jpg",
+        },
+        {
+          title: "Teranga Play",
+          description: "Rejoignez Teranga play et connectez-vous avec des milliers de passionnés de football. Gestion des réservations en temps réel, traitement automatisé des paiements, avis clients, promotions et analyses statistiques.",
+          tech: ["Flutter", "Dart", "REST API", "Firebase"],
+          playStore: "https://play.google.com/store/apps/details?id=com.yoonudigital.terangaplay&pcampaignid=web_share",
+          image: "/images/project-terangaplay.png",
+        },
+        {
+          title: "Scanne Ma",
+          description: "Application de scanner QR rapide, intuitive et légère. Scan instantané de codes QR multi-format, reconnaissance automatique des URLs, respect de la vie privée et fonctionnement hors ligne.",
+          tech: ["Flutter", "Dart", "Camera API", "QR Scanner"],
+          playStore: "https://play.google.com/store/apps/details?id=com.yoonudigital.scanne_ma",
+          image: "/images/project-scannema.png",
         },
                 {
           title: "Fadjiou Pro",
@@ -361,10 +376,25 @@ export const translations = {
       projects: [
                 {
           title: "SamaTicket",
-          description: "Mobile ticketing application for event ticket purchases. SMS OTP authentication, event browsing, ticket purchasing with mobile money payment (Wave, Orange Money, Free Money), QR code generation and ticket management. Deployed on the Play Store.",
+          description: "Mobile ticketing application for event ticket purchases. SMS OTP authentication, event browsing, ticket purchasing with mobile money payment (Wave, Orange Money, Free Money), QR code generation and ticket management. Deployed on Play Store and App Store.",
           tech: ["Flutter", "Dart", "REST API", "Wave API", "Orange Money API"],
           playStore: "https://play.google.com/store/apps/details?id=com.nexustechstacks.sama_ticket",
+          appStore: "https://apps.apple.com/us/app/samaticket/id6770509339?l=fr-FR",
           image: "/images/project-samaticket.jpg",
+        },
+        {
+          title: "Teranga Play",
+          description: "Connect with thousands of football enthusiasts and venue managers. Real-time booking management, automated payments, customer reviews and ratings, promotional tools, and detailed analytics.",
+          tech: ["Flutter", "Dart", "REST API", "Firebase"],
+          playStore: "https://play.google.com/store/apps/details?id=com.yoonudigital.terangaplay&pcampaignid=web_share",
+          image: "/images/project-terangaplay.png",
+        },
+        {
+          title: "Scanne Ma",
+          description: "Fast, intuitive, and lightweight QR Code scanner application. Instant multi-format QR scanning, automatic URL recognition, complete privacy respect, and offline support.",
+          tech: ["Flutter", "Dart", "Camera API", "QR Scanner"],
+          playStore: "https://play.google.com/store/apps/details?id=com.yoonudigital.scanne_ma",
+          image: "/images/project-scannema.png",
         },
                 {
           title: "Fadjiou Pro",

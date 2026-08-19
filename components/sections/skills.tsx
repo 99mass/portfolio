@@ -11,7 +11,8 @@ type SkillItem = {
 type SkillCategory = {
   key: string
   color: string
-  bgColor: string
+  dotColor: string
+  barColor: string
   borderColor: string
   skills: SkillItem[]
 }
@@ -20,8 +21,9 @@ const skillCategories: SkillCategory[] = [
   {
     key: "frontend",
     color: "text-primary",
-    bgColor: "bg-primary/10",
-    borderColor: "border-primary/20",
+    dotColor: "bg-primary",
+    barColor: "bg-primary",
+    borderColor: "border-primary/20 hover:border-primary/50",
     skills: [
       { label: "React / Next.js", level: 90 },
       { label: "Angular", level: 75 },
@@ -33,8 +35,9 @@ const skillCategories: SkillCategory[] = [
   {
     key: "backend",
     color: "text-chart-2",
-    bgColor: "bg-chart-2/10",
-    borderColor: "border-chart-2/20",
+    dotColor: "bg-chart-2",
+    barColor: "bg-chart-2",
+    borderColor: "border-chart-2/20 hover:border-chart-2/50",
     skills: [
       { label: "Node.js", level: 85 },
       { label: "Spring Boot (Java)", level: 80 },
@@ -46,8 +49,9 @@ const skillCategories: SkillCategory[] = [
   {
     key: "mobile",
     color: "text-chart-3",
-    bgColor: "bg-chart-3/10",
-    borderColor: "border-chart-3/20",
+    dotColor: "bg-chart-3",
+    barColor: "bg-chart-3",
+    borderColor: "border-chart-3/20 hover:border-chart-3/50",
     skills: [
       { label: "Flutter / Dart", level: 88 },
       { label: "Architecture Mobile", level: 85 },
@@ -57,8 +61,9 @@ const skillCategories: SkillCategory[] = [
   {
     key: "databases",
     color: "text-chart-4",
-    bgColor: "bg-chart-4/10",
-    borderColor: "border-chart-4/20",
+    dotColor: "bg-chart-4",
+    barColor: "bg-chart-4",
+    borderColor: "border-chart-4/20 hover:border-chart-4/50",
     skills: [
       { label: "PostgreSQL", level: 85 },
       { label: "MongoDB", level: 80 },
@@ -68,8 +73,9 @@ const skillCategories: SkillCategory[] = [
   {
     key: "tools",
     color: "text-muted-foreground",
-    bgColor: "bg-muted-foreground/10",
-    borderColor: "border-muted-foreground/20",
+    dotColor: "bg-muted-foreground",
+    barColor: "bg-muted-foreground",
+    borderColor: "border-muted-foreground/20 hover:border-muted-foreground/50",
     skills: [
       { label: "Git / GitHub / Gitea", level: 92 },
       { label: "Docker", level: 78 },
@@ -148,11 +154,11 @@ export function SkillsSection() {
               key={category.key}
               variants={cardVariants}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className={`group flex flex-col gap-5 rounded-xl border ${category.borderColor} bg-card p-6 transition-colors hover:border-opacity-50`}
+              className={`group flex flex-col gap-5 rounded-xl border ${category.borderColor} bg-card p-6 transition-colors`}
             >
               {/* Category header */}
               <div className="flex items-center gap-3">
-                <div className={`h-2 w-2 rounded-full ${category.bgColor.replace('/10', '')}`} />
+                <div className={`h-2 w-2 rounded-full ${category.dotColor}`} />
                 <h3 className={`font-heading text-base font-semibold ${category.color}`}>
                   {getCategoryName(category.key)}
                 </h3>
@@ -180,7 +186,7 @@ export function SkillsSection() {
                           delay: skillIndex * 0.1,
                           ease: [0.16, 1, 0.3, 1],
                         }}
-                        className={`h-full rounded-full ${category.bgColor.replace('/10', '/60')}`}
+                        className={`h-full rounded-full ${category.barColor}`}
                       />
                     </div>
                   </div>

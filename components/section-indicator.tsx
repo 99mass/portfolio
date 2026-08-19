@@ -13,8 +13,8 @@ export function SectionIndicator() {
   const sectionKeys: (keyof typeof t.sections)[] = [
     "hero",
     "about",
-    "web",
     "mobile",
+    "web",
     "skills",
     "contact",
   ]

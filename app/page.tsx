@@ -32,16 +32,16 @@ export default function Home() {
         <AboutSection />
       </ScrollSection>
 
-      {/* 3 - Web Projects */}
-      <ScrollSection id="web-projects">
-        <SectionLabel label={t.sectionLabels.webProjects} number="03" />
-        <WebProjectsSection />
+      {/* 3 - Mobile Projects */}
+      <ScrollSection id="mobile-projects">
+        <SectionLabel label={t.sectionLabels.mobile} number="03" />
+        <MobileProjectsSection />
       </ScrollSection>
 
-      {/* 4 - Mobile Projects */}
-      <ScrollSection id="mobile-projects" className="bg-card">
-        <SectionLabel label={t.sectionLabels.mobile} number="04" />
-        <MobileProjectsSection />
+      {/* 4 - Web Projects */}
+      <ScrollSection id="web-projects" className="bg-card">
+        <SectionLabel label={t.sectionLabels.webProjects} number="04" />
+        <WebProjectsSection />
       </ScrollSection>
 
       {/* 5 - Skills */}
