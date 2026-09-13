@@ -96,9 +96,11 @@ export function AboutSection() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="flex flex-col gap-4"
           >
-            <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-              {t.about.bio}
-            </p>
+            {t.about.bio.split("\n\n").map((paragraph, i) => (
+              <p key={i} className="max-w-xl text-lg leading-relaxed text-muted-foreground">
+                {paragraph}
+              </p>
+            ))}
             <div className="flex items-center gap-2 text-sm text-primary">
               <MapPin className="h-4 w-4" />
               <span className="font-mono">{t.about.location}</span>

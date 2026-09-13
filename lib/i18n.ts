@@ -29,7 +29,7 @@ export const translations = {
     // About section
     about: {
       headline: "Qui suis-je ?",
-      bio: "Ingénieur logiciel Full-Stack & Mobile, expert en architectures modernes et développement d'applications performantes. Expérience en leadership technique, conception d'APIs et déploiement mobile. Passionné par l'innovation et l'optimisation des systèmes à fort impact.",
+      bio: "Je suis Samba Diop, ingénieur logiciel Full-Stack & Mobile basé à Dakar, Sénégal. Passionné par la création de produits numériques à fort impact, je conçois et développe des applications web et mobile de A à Z — de l'architecture technique jusqu'au déploiement en production.\n\nAvec une maîtrise de Flutter, Next.js, React, Go, Supabase et Firebase, j'interviens aussi bien côté frontend que backend. Je publie des applications sur l'App Store (Apple App Store Connect) et Google Play Store en autonomie complète.\n\nAu-delà du code, je suis polyvalent : montage vidéo, gestion d'outils digitaux, coordination d'équipe. Je travaille en freelance pour des clients au Sénégal, en Afrique de l'Ouest et à l'international. Toujours à la recherche de nouveaux défis pour construire des solutions qui font la différence.",
       location: "Dakar, Sénégal",
       stackTitle: "Stack technique",
       timelineTitle: "Parcours",
@@ -290,7 +290,7 @@ export const translations = {
     // About section
     about: {
       headline: "Who am I?",
-      bio: "Full-Stack & Mobile Software Engineer, expert in modern architectures and high-performance application development. Experienced in technical leadership, API design, and mobile deployment. Passionate about innovation and optimizing high-impact systems.",
+      bio: "I'm Samba Diop, a Full-Stack & Mobile Software Engineer based in Dakar, Senegal. Passionate about building high-impact digital products, I design and develop web and mobile applications end-to-end — from technical architecture to production deployment.\n\nProficient in Flutter, Next.js, React, Go, Supabase, and Firebase, I work across both frontend and backend. I independently publish apps on the App Store (Apple App Store Connect) and Google Play Store.\n\nBeyond coding, I'm versatile: video editing, digital tools management, and team coordination. I work as a freelancer for clients in Senegal, West Africa, and internationally. Always looking for new challenges to build solutions that make a real difference.",
       location: "Dakar, Senegal",
       stackTitle: "Tech Stack",
       timelineTitle: "Journey",
