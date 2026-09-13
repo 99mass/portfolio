@@ -55,7 +55,8 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { label: "Flutter / Dart", level: 88 },
       { label: "Architecture Mobile", level: 85 },
-      { label: "Store Deployment", level: 82 },
+      { label: "Apple App Store Connect", level: 90 },
+      { label: "Google Play Console", level: 90 },
     ],
   },
   {
@@ -68,6 +69,8 @@ const skillCategories: SkillCategory[] = [
       { label: "PostgreSQL", level: 85 },
       { label: "MongoDB", level: 80 },
       { label: "MySQL", level: 82 },
+      { label: "Supabase", level: 88 },
+      { label: "Firebase", level: 82 },
     ],
   },
   {

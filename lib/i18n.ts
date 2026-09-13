@@ -37,18 +37,18 @@ export const translations = {
       formationsTitle: "Formations",
       experiences: [
         {
-          year: "2026",
-          title: "Développeur Full-Stack (Freelance)",
+          year: "Juin 2026 - Présent",
+          title: "Assistant Digital (Freelance)",
           place: "Le Guide IA",
-          location: "Dakar, Sénégal (Remote)",
+          location: "New York, États-Unis (Remote)",
           description:
-            "Conception intégrale et réalisation complète de la plateforme Le Guide IA (https://www.leguideai.com). Architecture Full-Stack Next.js & React 19, Supabase, Tailwind CSS. Espace membre, catalogue de formations IA, Bootcamps et parcours client automatisé.",
+            "Polyvalence complète en tant qu'assistant digital : conception et développement Full-Stack de la plateforme Le Guide IA , montage vidéo pour les formations et contenus en ligne, gestion des outils digitaux et contribution à toutes les tâches techniques de la structure.",
         },
         {
           year: "Sept - Déc 2025",
-          title: "Lead Mobile",
+          title: "Lead Mobile (Freelance)",
           place: "Sen Digital Factory",
-          location: "Dakar, Sénégal",
+          location: "Dakar, Sénégal (Remote)",
           description:
             "Responsable de l'architecture mobile. Intégration d'APIs REST. Développement des fonctionnalités. Déploiement sur les stores. Coordination de l'équipe mobile.",
         },
@@ -56,7 +56,7 @@ export const translations = {
           year: "2023 - 2026",
           title: "Développeur Full-Stack Web & Mobile",
           place: "Zone01 Dakar",
-          location: "Dakar, Sénégal",
+          location: "Dakar, Sénégal (Sur site)",
           description:
             "Développement d'applications web et mobile. Création et intégration d'APIs REST et GraphQL. Mise en place d'architecture microservices.",
         },
@@ -298,18 +298,18 @@ export const translations = {
       formationsTitle: "Education",
       experiences: [
         {
-          year: "2026",
-          title: "Full-Stack Developer (Freelance)",
+          year: "June 2026 - Present",
+          title: "Digital Assistant (Freelance)",
           place: "Le Guide IA",
-          location: "Dakar, Senegal (Remote)",
+          location: "New York, USA (Remote)",
           description:
-            "End-to-end design and complete development of the Le Guide IA platform (https://www.leguideai.com). Full-Stack architecture with Next.js & React 19, Supabase, Tailwind CSS. Member portal, AI training catalog, Bootcamps, and automated customer workflows.",
+            "Full-scope digital assistant role: end-to-end Full-Stack development of the Le Guide IA platform , video editing for online courses and content, digital tools management, and contribution to all technical tasks across the organisation.",
         },
         {
           year: "Sept - Dec 2025",
-          title: "Lead Mobile Developer",
+          title: "Lead Mobile Developer (Freelance)",
           place: "Sen Digital Factory",
-          location: "Dakar, Senegal",
+          location: "Dakar, Senegal (Remote)",
           description:
             "Mobile architecture ownership. REST API integration. Feature development. App store deployment. Mobile team coordination.",
         },
@@ -317,7 +317,7 @@ export const translations = {
           year: "2023 - 2026",
           title: "Full-Stack Web & Mobile Developer",
           place: "Zone01 Dakar",
-          location: "Dakar, Senegal",
+          location: "Dakar, Senegal (On-site)",
           description:
             "Web and mobile application development. REST and GraphQL API creation and integration. Microservices architecture implementation.",
         },
