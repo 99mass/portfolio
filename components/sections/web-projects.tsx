@@ -106,9 +106,9 @@ export function WebProjectsSection() {
 
                 {/* Links */}
                 <div className="flex items-center gap-4 pt-1">
-                  {project.github && (
+                  {"github" in project && (project as { github?: string }).github && (
                     <a
-                      href={project.github}
+                      href={(project as { github?: string }).github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-1.5 font-mono text-[11px] text-muted-foreground transition-colors hover:text-primary"

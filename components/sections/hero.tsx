@@ -45,7 +45,7 @@ export function HeroSection() {
           <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-primary/40 md:h-40 md:w-40">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile-HhOxSPoDPIATx7vtQnuonANLut30wQ.png"
-              alt="Samba Diop"
+              alt="Samba Diop — Développeur Full-Stack &amp; Mobile à Dakar, Sénégal"
               fill
               className="object-cover object-top"
               priority
@@ -87,6 +87,17 @@ export function HeroSection() {
           {t.hero.tagline}
           <br />
           <span className="text-foreground/80">{t.hero.taglineSuffix}</span>
+        </motion.p>
+
+        {/* Location — visible for SEO */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.25 }}
+          className="font-mono text-xs text-muted-foreground/60 tracking-widest uppercase"
+          aria-label="Localisation : Dakar, Sénégal · Afrique de l'Ouest"
+        >
+          📍 Dakar, Sénégal &middot; Afrique de l&apos;Ouest
         </motion.p>
 
         {/* GitHub button */}

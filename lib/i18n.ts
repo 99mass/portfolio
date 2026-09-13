@@ -37,6 +37,14 @@ export const translations = {
       formationsTitle: "Formations",
       experiences: [
         {
+          year: "2026",
+          title: "Développeur Full-Stack (Freelance)",
+          place: "Le Guide IA",
+          location: "Dakar, Sénégal (Remote)",
+          description:
+            "Conception intégrale et réalisation complète de la plateforme Le Guide IA (https://www.leguideai.com). Architecture Full-Stack Next.js & React 19, Supabase, Tailwind CSS. Espace membre, catalogue de formations IA, Bootcamps et parcours client automatisé.",
+        },
+        {
           year: "Sept - Déc 2025",
           title: "Lead Mobile",
           place: "Sen Digital Factory",
@@ -90,6 +98,27 @@ export const translations = {
       forks: "forks",
       projects: [
         {
+          title: "GCOM Goodies",
+          description: "Plateforme e-commerce B2B de goodies et objets publicitaires personnalisés. Catalogue interactif avec filtres et recherche, personnalisation sur mesure (couleurs, techniques de marquage, quantités, upload de logo), génération et demande de devis en temps réel avec back-office d'administration complet.",
+          tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL"],
+          live: "https://www.gcomagency.com/",
+          image: "/images/project-gcom.png",
+        },
+        {
+          title: "Le Guide IA",
+          description: "Plateforme leader de formations, bootcamps et masterclasses en Intelligence Artificielle. Conception complète : catalogue de formations IA, bootcamps immersifs, espace membre, système de souscription et parcours client automatisé.",
+          tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Cloudflare"],
+          live: "https://www.leguideai.com",
+          image: "/images/project-leguideia.jpg",
+        },
+        {
+          title: "AfroTentacles",
+          description: "Plateforme média et blog d'analyse géoéconomique et géopolitique africaine. Décryptage approfondi des dynamiques continentales, flux d'actualités en temps réel, analyses stratégiques, éditeur de contenu riche et gestion éditoriale moderne.",
+          tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
+          live: "https://www.afrotentacles.com",
+          image: "/images/project-afrotentacles.jpg",
+        },
+        {
           title: "Gitea to GitHub",
           description: "Outil CLI de migration automatique de repositories Gitea vers GitHub. Preserve l'historique complet des commits, branches et tags. Projet le plus populaire avec 38 etoiles et 3 forks.",
           tech: ["JavaScript", "Node.js", "GitHub API", "Gitea API"],
@@ -142,13 +171,21 @@ export const translations = {
       subtitle: "Applications natives et cross-platform avec Flutter/Dart.",
       viewCode: "Code source",
       projects: [
-                {
+        {
           title: "SamaTicket",
           description: "Application de billetterie mobile pour l'achat de tickets d'evenements. Authentification OTP par SMS, parcours d'evenements, achat de billets avec paiement mobile money (Wave, Orange Money, Free Money), generation de codes QR et gestion des billets achetes. Deployee sur le Play Store et l'App Store.",
           tech: ["Flutter", "Dart", "REST API", "Wave API", "Orange Money API"],
           playStore: "https://play.google.com/store/apps/details?id=com.nexustechstacks.sama_ticket",
           appStore: "https://apps.apple.com/us/app/samaticket/id6770509339?l=fr-FR",
           image: "/images/project-samaticket.jpg",
+        },
+        {
+          title: "MyGCOM",
+          description: "Application mobile B2B officielle de GCOM Agency disponible sur l'App Store et Google Play. Consultation du catalogue d'objets publicitaires par catégories, recherche rapide, configuration de demandes de devis sur mesure, notifications push et gestion du compte client.",
+          tech: ["Flutter", "Dart", "Riverpod", "Supabase", "Firebase", "GoRouter"],
+          playStore: "https://play.google.com/store/apps/details?id=com.gcomagency.gcom",
+          appStore: "https://apps.apple.com/us/app/mygcom/id6794462636?l=fr-FR",
+          image: "/images/project-mygcom.png",
         },
         {
           title: "Teranga Play",
@@ -164,19 +201,12 @@ export const translations = {
           playStore: "https://play.google.com/store/apps/details?id=com.yoonudigital.scanne_ma",
           image: "/images/project-scannema.png",
         },
-                {
+        {
           title: "Fadjiou Pro",
           description: "Application mobile professionnelle deployee sur les stores durant mon experience en tant que Lead Mobile chez Sen Digital Factory. Gestion de services, reservations et notifications push.",
           tech: ["Flutter", "Dart", "REST API", "Firebase"],
           appStore: "https://apps.apple.com/us/app/fadjou-pro/id6754820442?l=fr-FR",
           image: "/images/project-mobile-fadjiou.jpg",
-        },
-        {
-          title: "Movie List",
-          description: "Application Flutter de decouverte de films. Parcourir les films populaires, recherche avancee, fiches detaillees avec notes, bandes-annonces et recommandations.",
-          tech: ["Flutter", "Dart", "TMDB API", "Provider"],
-          github: "https://github.com/99mass/movie-list",
-          image: "/images/project-mobile-movielist.jpg",
         },
         {
           title: "Chess",
@@ -268,6 +298,14 @@ export const translations = {
       formationsTitle: "Education",
       experiences: [
         {
+          year: "2026",
+          title: "Full-Stack Developer (Freelance)",
+          place: "Le Guide IA",
+          location: "Dakar, Senegal (Remote)",
+          description:
+            "End-to-end design and complete development of the Le Guide IA platform (https://www.leguideai.com). Full-Stack architecture with Next.js & React 19, Supabase, Tailwind CSS. Member portal, AI training catalog, Bootcamps, and automated customer workflows.",
+        },
+        {
           year: "Sept - Dec 2025",
           title: "Lead Mobile Developer",
           place: "Sen Digital Factory",
@@ -320,6 +358,27 @@ export const translations = {
       stars: "stars",
       forks: "forks",
       projects: [
+        {
+          title: "GCOM Goodies",
+          description: "B2B e-commerce platform for custom promotional items and goodies. Interactive catalog with search and filters, bespoke customization (colors, branding techniques, MOQ, logo upload), real-time quotation requests, and full administrative back-office.",
+          tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL"],
+          live: "https://www.gcomagency.com/",
+          image: "/images/project-gcom.png",
+        },
+        {
+          title: "Le Guide IA",
+          description: "Leading training, bootcamp, and masterclass platform for Artificial Intelligence. Complete platform design and development: AI training catalog, immersive bootcamps, student member portal, subscription system, and automated customer journey.",
+          tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Cloudflare"],
+          live: "https://www.leguideai.com",
+          image: "/images/project-leguideia.jpg",
+        },
+        {
+          title: "AfroTentacles",
+          description: "Media platform and analytical blog focused on African geoeconomics and geopolitics. In-depth strategic analyses of continental dynamics, real-time news feed, rich content editor, and modern editorial management.",
+          tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
+          live: "https://www.afrotentacles.com",
+          image: "/images/project-afrotentacles.jpg",
+        },
         {
           title: "Gitea to GitHub",
           description: "CLI tool for automatic Gitea to GitHub repository migration. Preserves full commit history, branches, and tags. Most popular project with 38 stars and 3 forks.",
@@ -374,13 +433,21 @@ export const translations = {
       subtitle: "Native and cross-platform applications with Flutter/Dart.",
       viewCode: "Source code",
       projects: [
-                {
+        {
           title: "SamaTicket",
           description: "Mobile ticketing application for event ticket purchases. SMS OTP authentication, event browsing, ticket purchasing with mobile money payment (Wave, Orange Money, Free Money), QR code generation and ticket management. Deployed on Play Store and App Store.",
           tech: ["Flutter", "Dart", "REST API", "Wave API", "Orange Money API"],
           playStore: "https://play.google.com/store/apps/details?id=com.nexustechstacks.sama_ticket",
           appStore: "https://apps.apple.com/us/app/samaticket/id6770509339?l=fr-FR",
           image: "/images/project-samaticket.jpg",
+        },
+        {
+          title: "MyGCOM",
+          description: "Official B2B mobile application for GCOM Agency available on App Store and Google Play. Browse custom promotional items catalog by category, quick search, bespoke quotation request configuration, push notifications, and client account management.",
+          tech: ["Flutter", "Dart", "Riverpod", "Supabase", "Firebase", "GoRouter"],
+          playStore: "https://play.google.com/store/apps/details?id=com.gcomagency.gcom",
+          appStore: "https://apps.apple.com/us/app/mygcom/id6794462636?l=fr-FR",
+          image: "/images/project-mygcom.png",
         },
         {
           title: "Teranga Play",
@@ -396,19 +463,12 @@ export const translations = {
           playStore: "https://play.google.com/store/apps/details?id=com.yoonudigital.scanne_ma",
           image: "/images/project-scannema.png",
         },
-                {
+        {
           title: "Fadjiou Pro",
           description: "Professional mobile application deployed on app stores during my experience as Lead Mobile at Sen Digital Factory. Service management, bookings and push notifications.",
           tech: ["Flutter", "Dart", "REST API", "Firebase"],
           appStore: "https://apps.apple.com/us/app/fadjou-pro/id6754820442?l=fr-FR",
           image: "/images/project-mobile-fadjiou.jpg",
-        },
-        {
-          title: "Movie List",
-          description: "Flutter movie discovery app. Browse popular movies, advanced search, detailed sheets with ratings, trailers and recommendations.",
-          tech: ["Flutter", "Dart", "TMDB API", "Provider"],
-          github: "https://github.com/99mass/movie-list",
-          image: "/images/project-mobile-movielist.jpg",
         },
         {
           title: "Chess",

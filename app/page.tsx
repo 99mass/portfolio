@@ -3,6 +3,7 @@
 import { ThemeToggle } from "@/components/theme-toggle"
 import { LangToggle } from "@/components/lang-toggle"
 import { SectionIndicator } from "@/components/section-indicator"
+import { WhatsAppFAB } from "@/components/whatsapp-fab"
 import { ScrollSection, SectionLabel } from "@/components/scroll-section"
 import { HeroSection } from "@/components/sections/hero"
 import { AboutSection } from "@/components/sections/about"
@@ -20,6 +21,7 @@ export default function Home() {
       <ThemeToggle />
       <LangToggle />
       <SectionIndicator />
+      <WhatsAppFAB />
 
       {/* 1 - Hero */}
       <ScrollSection id="hero">

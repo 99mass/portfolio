@@ -10,6 +10,7 @@ import {
   AlertCircle,
   Phone,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/whatsapp-fab";
 import { useLang } from "@/components/lang-provider";
 
 export function ContactSection() {
@@ -229,7 +230,21 @@ export function ContactSection() {
           <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground/50">
             {t.contact.orReach}
           </p>
-          <div className="flex items-center gap-6">
+
+          {/* WhatsApp Direct Contact Button */}
+          <motion.a
+            href="https://wa.me/221771169551?text=Bonjour%20Samba%2C%20je%20vous%20contacte%20depuis%20votre%20portfolio."
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.03, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            className="flex items-center gap-3 rounded-xl border border-[#25D366]/30 bg-[#25D366]/10 px-6 py-3 font-mono text-sm font-semibold text-[#25D366] transition-all hover:border-[#25D366] hover:bg-[#25D366] hover:text-white hover:shadow-lg hover:shadow-[#25D366]/25"
+          >
+            <WhatsAppIcon className="h-5 w-5 fill-current" />
+            <span>WhatsApp : +221 77 116 95 51</span>
+          </motion.a>
+
+          <div className="flex flex-wrap items-center justify-center gap-6 pt-1">
             <a
               href="mailto:sambadiop161@gmail.com"
               className="group flex items-center gap-2 font-mono text-sm text-muted-foreground transition-colors hover:text-primary"
@@ -246,14 +261,14 @@ export function ContactSection() {
               <Github className="h-4 w-4" />
               <span>99mass</span>
             </a>
+            <a
+              href="tel:+221771169551"
+              className="group flex items-center gap-2 font-mono text-sm text-muted-foreground transition-colors hover:text-primary"
+            >
+              <Phone className="h-4 w-4" />
+              <span>+221 77 116 95 51</span>
+            </a>
           </div>
-          <a
-            href="tel:+221771169551"
-            className="flex items-center gap-2 font-mono text-sm text-muted-foreground transition-colors hover:text-primary"
-          >
-            <Phone className="h-4 w-4" />
-            <span>+221 77 116 95 51</span>
-          </a>
         </motion.div>
       </div>
     </div>
